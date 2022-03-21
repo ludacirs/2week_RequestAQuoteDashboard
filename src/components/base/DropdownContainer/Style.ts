@@ -8,6 +8,7 @@ interface FormProps {
 
 export const Form = styled.form<FormProps>`
   ${flexbox({ flex: 'inline-flex', jc: 'center', ai: 'center' })};
+  cursor: pointer;
 
   position: relative;
   height: ${({ theme }) => `${theme.size.buttonHeight}px`};
@@ -17,7 +18,6 @@ export const Form = styled.form<FormProps>`
   border-radius: ${({ theme }) => `${theme.size.borderRadius}px`};
   background-color: ${({ isChecked, theme }) =>
     isChecked ? theme.colors.blue : 'white'};
-
   font-family: 'Roboto', sans-serif;
   ${font12(500)};
   color: inherit;
